@@ -1,17 +1,19 @@
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// Ocelot Configuration Add Here Your ocelot redirection !!!
+builder.Configuration.AddJsonFile("Ocelot/authOcelot.json", false, true);
+builder.Services.AddOcelot(builder.Configuration);
+
+// Debug Configuration
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.SetMinimumLevel(LogLevel.Debug);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
+await app.UseOcelot();
 
 app.Run();
