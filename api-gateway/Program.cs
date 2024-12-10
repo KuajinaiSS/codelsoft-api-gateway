@@ -4,7 +4,7 @@ using Ocelot.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 
 // Ocelot Configuration Add Here Your ocelot redirection !!!
-builder.Configuration.AddJsonFile("Ocelot/authOcelot.json", false, true);
+builder.Configuration.AddJsonFile("Ocelot.json", false, true);
 builder.Services.AddOcelot(builder.Configuration);
 
 // Debug Configuration

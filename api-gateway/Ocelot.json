@@ -1,0 +1,99 @@
+﻿{
+  "Routes": [
+    {
+      "RouteName": "auth-login",
+      "DownstreamPathTemplate": "/auth/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/auth-service/login",
+      "UpstreamHttpMethod": ["POST"]
+    },
+    {
+      "RouteName": "token-validate",
+      "DownstreamPathTemplate": "/token/validate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/auth-service/token/validate",
+      "UpstreamHttpMethod": ["POST"]
+    },
+    {
+      "RouteName": "token-revoke",
+      "DownstreamPathTemplate": "/token/revoke",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/auth-service/token/revoke",
+      "UpstreamHttpMethod": ["POST"]
+    },
+
+    {
+      "RouteName": "subject-get-all",
+      "DownstreamPathTemplate": "/subjects",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/subjects",
+      "UpstreamHttpMethod": ["GET"]
+    },
+
+    {
+      "RouteName": "relationships-get-all",
+      "DownstreamPathTemplate": "/relationships",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/relationships",
+      "UpstreamHttpMethod": ["GET"]
+    },
+
+    {
+      "RouteName": "post-requisites-get-all",
+      "DownstreamPathTemplate": "/post-requisites",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/post-requisites",
+      "UpstreamHttpMethod": ["GET"]
+    },
+
+    {
+      "RouteName": "pre-requisites-get-all",
+      "DownstreamPathTemplate": "/pre-requisites",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/pre-requisites",
+      "UpstreamHttpMethod": ["GET"]
+    }
+  ]
+}
