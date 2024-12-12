@@ -39,7 +39,10 @@
       "UpstreamPathTemplate": "/auth-service/token/revoke",
       "UpstreamHttpMethod": ["POST"]
     },
-
+    
+    
+    
+    
     {
       "RouteName": "subject-get-all",
       "DownstreamPathTemplate": "/subjects",
@@ -53,7 +56,6 @@
       "UpstreamPathTemplate": "/subjects",
       "UpstreamHttpMethod": ["GET"]
     },
-
     {
       "RouteName": "relationships-get-all",
       "DownstreamPathTemplate": "/relationships",
@@ -67,7 +69,6 @@
       "UpstreamPathTemplate": "/relationships",
       "UpstreamHttpMethod": ["GET"]
     },
-
     {
       "RouteName": "post-requisites-get-all",
       "DownstreamPathTemplate": "/post-requisites",
@@ -81,7 +82,6 @@
       "UpstreamPathTemplate": "/post-requisites",
       "UpstreamHttpMethod": ["GET"]
     },
-
     {
       "RouteName": "pre-requisites-get-all",
       "DownstreamPathTemplate": "/pre-requisites",
@@ -93,6 +93,19 @@
         }
       ],
       "UpstreamPathTemplate": "/pre-requisites",
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "RouteName": "careers-get-all",
+      "DownstreamPathTemplate": "/careers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/careers",
       "UpstreamHttpMethod": ["GET"]
     }
   ]
