@@ -39,10 +39,6 @@
       "UpstreamPathTemplate": "/auth-service/token/revoke",
       "UpstreamHttpMethod": ["POST"]
     },
-    
-    
-    
-    
     {
       "RouteName": "subject-get-all",
       "DownstreamPathTemplate": "/subjects",
@@ -107,6 +103,84 @@
       ],
       "UpstreamPathTemplate": "/careers",
       "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "RouteName": "users-profile",
+      "DownstreamPathTemplate": "/profile",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/profile",
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "RouteName": "users-profile-update",
+      "DownstreamPathTemplate": "/update-profile",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/update-profile",
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "RouteName": "users-progress",
+      "DownstreamPathTemplate": "/my-progress",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/my-progress",
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "RouteName": "users-progress-update",
+      "DownstreamPathTemplate": "/my-progress",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/update-my-progress",
+      "UpstreamHttpMethod": ["PATCH"]
+    },
+    {
+      "RouteName": "users-register",
+      "DownstreamPathTemplate": "/register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/register",
+      "UpstreamHttpMethod": ["POST"]
+    },
+    {
+      "RouteName": "users-update-password",
+      "DownstreamPathTemplate": "/update-password",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/update-password",
+      "UpstreamHttpMethod": ["PUT"]
     }
   ]
 }
