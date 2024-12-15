@@ -192,7 +192,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/Resources",
-      "UpstreamHttpMethod": ["Get"]
+      "UpstreamHttpMethod": ["GET"]
     },
     {
       "DownstreamPathTemplate": "/api/Resources/{id}",
@@ -204,7 +204,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/Resources/{id}",
-      "UpstreamHttpMethod": ["Get"]
+      "UpstreamHttpMethod": ["GET"]
     }
   ]
 }
