@@ -36,6 +36,9 @@ dotnet restore
 ```bash
 docker-compose up -d
 ```
+Una vez levantado el contenedor, acceder a RabbitMQ con http://localhost:15672/ y las credenciales 
+Username:guest
+Password:guest
 
 5. Ejecutamos el proyecto
 ```bash
