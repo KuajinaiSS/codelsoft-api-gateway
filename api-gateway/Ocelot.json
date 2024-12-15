@@ -10,7 +10,7 @@
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/auth-service/login",
+      "UpstreamPathTemplate": "/api/auth/login",
       "UpstreamHttpMethod": ["POST"]
     },
     {
@@ -23,7 +23,7 @@
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/auth-service/token/validate",
+      "UpstreamPathTemplate": "/api/token/validate",
       "UpstreamHttpMethod": ["POST"]
     },
     {
@@ -36,7 +36,7 @@
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/auth-service/token/revoke",
+      "UpstreamPathTemplate": "/api/token/revoke",
       "UpstreamHttpMethod": ["POST"]
     },
     {
@@ -49,7 +49,7 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/subjects",
+      "UpstreamPathTemplate": "/api/subjects",
       "UpstreamHttpMethod": ["GET"]
     },
     {
@@ -62,7 +62,7 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/relationships",
+      "UpstreamPathTemplate": "/api/relationships",
       "UpstreamHttpMethod": ["GET"]
     },
     {
@@ -75,7 +75,7 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/post-requisites",
+      "UpstreamPathTemplate": "/api/post-requisites",
       "UpstreamHttpMethod": ["GET"]
     },
     {
@@ -88,7 +88,7 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/pre-requisites",
+      "UpstreamPathTemplate": "/api/pre-requisites",
       "UpstreamHttpMethod": ["GET"]
     },
     {
@@ -101,7 +101,7 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/careers",
+      "UpstreamPathTemplate": "/api/careers",
       "UpstreamHttpMethod": ["GET"]
     },
     {
@@ -114,7 +114,7 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/profile",
+      "UpstreamPathTemplate": "/api/profile",
       "UpstreamHttpMethod": ["GET"]
     },
     {
@@ -127,7 +127,7 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/update-profile",
+      "UpstreamPathTemplate": "/api/update-profile",
       "UpstreamHttpMethod": ["GET"]
     },
     {
@@ -140,7 +140,7 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/my-progress",
+      "UpstreamPathTemplate": "/api/my-progress",
       "UpstreamHttpMethod": ["GET"]
     },
     {
@@ -153,7 +153,7 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/update-my-progress",
+      "UpstreamPathTemplate": "/api/update-my-progress",
       "UpstreamHttpMethod": ["PATCH"]
     },
     {
@@ -166,7 +166,7 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/register",
+      "UpstreamPathTemplate": "/api/register",
       "UpstreamHttpMethod": ["POST"]
     },
     {
@@ -179,36 +179,32 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/update-password",
+      "UpstreamPathTemplate": "/api/update-password",
       "UpstreamHttpMethod": ["PUT"]
     },
     {
-      "Routes": [
+      "DownstreamPathTemplate": "/api/Resources",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
         {
-          "DownstreamPathTemplate": "/api/Resources",
-          "DownstreamScheme": "http",
-          "DownstreamHostAndPorts": [
-            {
-              "Host": "localhost",
-              "Port": 80
-            }
-          ],
-          "UpstreamPathTemplate": "/api/Resources",
-          "UpstreamHttpMethod": ["Get"]
-        },
-        {
-          "DownstreamPathTemplate": "/api/Resources/{id}",
-          "DownstreamScheme": "http",
-          "DownstreamHostAndPorts": [
-            {
-              "Host": "localhost",
-              "Port": 80
-            }
-          ],
-          "UpstreamPathTemplate": "/api/Resources/{id}",
-          "UpstreamHttpMethod": ["Get"]
+          "Host": "localhost",
+          "Port": 80
         }
-      ]
+      ],
+      "UpstreamPathTemplate": "/api/Resources",
+      "UpstreamHttpMethod": ["Get"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Resources/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Resources/{id}",
+      "UpstreamHttpMethod": ["Get"]
     }
   ]
 }

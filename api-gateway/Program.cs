@@ -4,6 +4,8 @@ using Ocelot.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<api_gateway.Microservices.Interfaces.IResourceMicroservice, api_gateway.Microservices.ResourceMicroservice>();
 builder.Configuration.AddJsonFile("Ocelot.json", false, true);
 builder.Services.AddOcelot(builder.Configuration);
 
@@ -20,13 +22,6 @@ builder.Services.AddApplicationServices(builder.Configuration);
 var app = builder.Build();
 
 await app.UseOcelot();
-
-// Add Swagger
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 
 // Add Https
 app.UseHttpsRedirection();
