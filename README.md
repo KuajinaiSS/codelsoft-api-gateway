@@ -8,10 +8,10 @@
 
 #### Este proyecto consta de migrar un monolito a 3 microservicios, donde está API Gateway va a “unir” estos, por lo que primeramente deberemos de clonar los 4 repositorios con los que funcionara la API Gateway (el monolito, auth-service, career-service, user-service), los pasos de la instalación de cada uno estará en el respectivo repositorio.
 
-- [Cubi12 monolito]()
+- [Cubi12 monolito (branch taller2)](https://github.com/Dizkm8/cubi12-api.git)
 - [codelsoft-auth-service](https://github.com/KuajinaiSS/codelsoft-auth-service.git)
 - [codelsoft-career-service](https://github.com/KuajinaiSS/codelsoft-career-service.git)
-- [codelsoft-user-service]()
+- [codelsoft-user-service](https://github.com/funktasthic/CodelsoftUserService.git)
 
 ## Pasos para clonar
 
@@ -25,16 +25,19 @@ git clone https://github.com/KuajinaiSS/codelsoft-api-gateway.git
 cd codelsoft-api-gateway
 ```
 
-3. accederemos con nuestro editor de codigo/ide preferido
+3. Accederemos con nuestro editor de codigo/ide preferido
 
-4. en el terminal, instalaremos las dependendencias
+4. En el terminal, instalaremos las dependendencias
 ```bash
 dotnet restore
+```
+
+4. Ejecutarmeos el contenedor de Docker para instalar RabbitMQ
+```bash
+docker-compose up -d
 ```
 
 5. Ejecutamos el proyecto
 ```bash
 dotnet run
 ```
-
-
