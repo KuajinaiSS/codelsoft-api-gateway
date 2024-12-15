@@ -1,8 +1,6 @@
-using System.Text;
-using api_gateway.Microservices;
 using api_gateway.Microservices.Interfaces;
 
-namespace UserService.Api.Extensions
+namespace api_gateway.Microservices.Extensions
 {
     public static class AppServiceExtensions
     {

@@ -1,6 +1,6 @@
+using api_gateway.Microservices.Extensions;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
-using UserService.Api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
